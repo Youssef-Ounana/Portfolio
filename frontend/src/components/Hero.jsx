@@ -3,6 +3,7 @@ import React from 'react';
 const Hero = () => {
   return (
     <section id="hero" className="min-h-screen flex flex-col justify-center items-center bg-gradient-to-b from-gray-900 to-black text-white px-6">
+      <img src="" alt="Photo" />
       <h1 className="text-4xl md:text-6xl font-bold mb-4 text-center">
         Salut, moi c’est <span className="text-blue-500">Youssef</span>
       </h1>
