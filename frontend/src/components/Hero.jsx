@@ -18,7 +18,7 @@ const Hero = () => {
           Voir mes projets
         </a>
         <a
-          href="/assets/OUNANA-YOUSSEF-CV.pdf"
+          href="/OUNANA-YOUSSEF-CV.pdf"
           className="border border-white hover:bg-white hover:text-black px-6 py-2 rounded-md transition"
           target="_blank"
           rel="noopener noreferrer"
