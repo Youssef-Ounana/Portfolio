@@ -11,7 +11,7 @@ import Skills from './components/Skills'
 
 const App = () => {
   return (
-    <div className="bg-black text-white">
+    <div className="bg-black text-white scroll-smooth">
         <Navbar/>
         <main>
         <Hero />
