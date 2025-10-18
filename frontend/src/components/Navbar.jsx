@@ -8,7 +8,7 @@ const Navbar = () => {
   return (
     <header className="fixed top-0 left-0 w-full bg-gray-900 text-white shadow-md z-50">
       <div className="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
-        <h1 className="text-xl font-bold text-blue-500">Youssef.dev</h1>
+        <h1 className="text-xl font-bold text-blue-500">Youssef Ounana</h1>
 
         {/* Desktop Menu */}
         <nav className="hidden md:flex space-x-6">
