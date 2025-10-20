@@ -1,9 +1,16 @@
 import React, { useState } from 'react';
+import { useTranslation } from 'react-i18next';
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   const toggleMenu = () => setIsOpen(!isOpen);
+
+   const { i18n } = useTranslation();
+
+  const changeLanguage = (lng) => {
+    i18n.changeLanguage(lng);
+  };
 
   return (
     <header className="fixed top-0 left-0 w-full bg-gray-900 text-white shadow-md z-50">
@@ -17,6 +24,12 @@ const Navbar = () => {
           <a href="#projects" className="hover:text-blue-400 transition">Projets</a>
           <a href="#skills" className="hover:text-blue-400 transition">Compétences</a>
           <a href="#contact" className="hover:text-blue-400 transition">Contact</a>
+
+          <div className="ml-4 flex gap-2">
+            <button onClick={() => changeLanguage('fr')} className="text-sm hover:underline">FR</button>
+            <button onClick={() => changeLanguage('en')} className="text-sm hover:underline">EN</button>
+          </div>
+
         </nav>
 
         {/* Mobile Menu Button */}
@@ -39,10 +52,18 @@ const Navbar = () => {
           <a href="#projects" className="block hover:text-blue-400">Projets</a>
           <a href="#skills" className="block hover:text-blue-400">Compétences</a>
           <a href="#contact" className="block hover:text-blue-400">Contact</a>
+
+          <div className="flex gap-4 pt-2">
+            <button onClick={() => changeLanguage('fr')} className="text-sm hover:underline">FR</button>
+            <button onClick={() => changeLanguage('en')} className="text-sm hover:underline">EN</button>
+          </div>
+
+
         </nav>
       )}
     </header>
   );
 };
+
 
 export default Navbar;

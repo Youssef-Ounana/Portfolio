@@ -1,0 +1,8 @@
+{
+  "hero": {
+    "greeting": "Salut, moi c’est",
+    "description": "Développeur Full-Stack. Bienvenue sur mon portfolio !",
+    "projects": "Voir mes projets",
+    "download": "Télécharger mon CV"
+  }
+}

@@ -7,9 +7,9 @@ const Footer = () => {
         © {new Date().getFullYear()} Youssef.dev — Tous droits réservés.
       </p>
       <div className="flex justify-center gap-4 mt-2">
-        <a href="https://github.com/tonpseudo" target="_blank" rel="noopener noreferrer" className="hover:text-white transition">GitHub</a>
-        <a href="https://linkedin.com/in/tonpseudo" target="_blank" rel="noopener noreferrer" className="hover:text-white transition">LinkedIn</a>
-        <a href="#contact" className="hover:text-white transition">Contact</a>
+        <a href="https://github.com/youssef-ounana" target="_blank" rel="noopener noreferrer" className="hover:text-white transition">GitHub</a>
+        <a href="https://linkedin.com/in/youssef-ounana/" target="_blank" rel="noopener noreferrer" className="hover:text-white transition">LinkedIn</a>
+        <a href="mailto:youssefounana@gmail.com" className="hover:text-white transition">Contact</a>
       </div>
     </footer>
   );

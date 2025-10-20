@@ -1,0 +1,8 @@
+{
+  "hero": {
+    "greeting": "Hi, I'm",
+    "description": "Full-Stack Developer. Welcome to my portfolio!",
+    "projects": "View my projects",
+    "download": "Download my CV"
+  }
+}
