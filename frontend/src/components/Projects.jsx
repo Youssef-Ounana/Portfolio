@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 import projects from '../data/projects';
 
 const categories = ['Tous', ...new Set(projects.map((p) => p.category))];
@@ -59,7 +60,11 @@ const Projects = () => {
 
               <div className="flex flex-col flex-1 p-5">
                 <div className="flex items-center justify-between gap-2 mb-2">
-                  <h3 className="text-xl font-semibold">{project.title}</h3>
+                  <h3 className="text-xl font-semibold">
+                    <Link to={`/projets/${project.slug}`} className="hover:text-blue-400">
+                      {project.title}
+                    </Link>
+                  </h3>
                   {project.status === 'en cours' && (
                     <span className="shrink-0 text-xs rounded-full bg-yellow-500/15 text-yellow-400 px-2 py-0.5">
                       En cours
@@ -77,20 +82,21 @@ const Projects = () => {
                   ))}
                 </ul>
 
-                {(project.github || project.demo) && (
-                  <div className="mt-auto flex gap-4">
-                    {project.github && (
-                      <a href={project.github} target="_blank" rel="noopener noreferrer" className="text-blue-400 hover:underline">
-                        Code source
-                      </a>
-                    )}
-                    {project.demo && (
-                      <a href={project.demo} target="_blank" rel="noopener noreferrer" className="text-blue-400 hover:underline">
-                        Démo en ligne
-                      </a>
-                    )}
-                  </div>
-                )}
+                <div className="mt-auto flex flex-wrap gap-4">
+                  <Link to={`/projets/${project.slug}`} className="font-medium text-white hover:text-blue-400">
+                    Voir le projet →
+                  </Link>
+                  {project.github && (
+                    <a href={project.github} target="_blank" rel="noopener noreferrer" className="text-blue-400 hover:underline">
+                      Code source
+                    </a>
+                  )}
+                  {project.demo && (
+                    <a href={project.demo} target="_blank" rel="noopener noreferrer" className="text-blue-400 hover:underline">
+                      Démo en ligne
+                    </a>
+                  )}
+                </div>
               </div>
             </article>
           ))}

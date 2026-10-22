@@ -1,11 +1,13 @@
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 
+// hash: section de la page d'accueil (fonctionne aussi depuis une page projet)
 const links = [
-  { href: '#hero', label: 'Accueil' },
-  { href: '#about', label: 'À propos' },
-  { href: '#projects', label: 'Projets' },
-  { href: '#skills', label: 'Compétences' },
-  { href: '#contact', label: 'Contact' },
+  { hash: '#hero', label: 'Accueil' },
+  { hash: '#about', label: 'À propos' },
+  { hash: '#projects', label: 'Projets' },
+  { hash: '#skills', label: 'Compétences' },
+  { hash: '#contact', label: 'Contact' },
 ];
 
 const Navbar = () => {
@@ -14,13 +16,13 @@ const Navbar = () => {
   return (
     <header className="fixed top-0 left-0 w-full bg-gray-900/90 backdrop-blur text-white shadow-md z-50">
       <div className="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
-        <a href="#hero" className="text-xl font-bold text-blue-500">Youssef Ounana</a>
+        <Link to="/" className="text-xl font-bold text-blue-500">Youssef Ounana</Link>
 
         <nav className="hidden md:flex space-x-6">
           {links.map((link) => (
-            <a key={link.href} href={link.href} className="hover:text-blue-400 transition">
+            <Link key={link.hash} to={{ pathname: '/', hash: link.hash }} className="hover:text-blue-400 transition">
               {link.label}
-            </a>
+            </Link>
           ))}
         </nav>
 
@@ -43,14 +45,14 @@ const Navbar = () => {
       {isOpen && (
         <nav className="md:hidden bg-gray-800 px-6 pb-4 space-y-2">
           {links.map((link) => (
-            <a
-              key={link.href}
-              href={link.href}
+            <Link
+              key={link.hash}
+              to={{ pathname: '/', hash: link.hash }}
               onClick={() => setIsOpen(false)}
               className="block py-1 hover:text-blue-400"
             >
               {link.label}
-            </a>
+            </Link>
           ))}
         </nav>
       )}
