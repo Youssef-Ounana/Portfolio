@@ -5,6 +5,7 @@ import { Link } from 'react-router-dom';
 const links = [
   { hash: '#hero', label: 'Accueil' },
   { hash: '#about', label: 'À propos' },
+  { hash: '#experience', label: 'Parcours' },
   { hash: '#projects', label: 'Projets' },
   { hash: '#skills', label: 'Compétences' },
   { hash: '#contact', label: 'Contact' },

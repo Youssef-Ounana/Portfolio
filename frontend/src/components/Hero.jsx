@@ -35,7 +35,7 @@ const Hero = () => {
         </h1>
 
         <p className="text-lg md:text-xl text-gray-300 max-w-xl mb-6 mx-auto md:mx-0">
-          Développeur Full-Stack &amp; DevOps, en Mastère Ingénierie Avancée du Logiciel (ISCOD, 2026–2028).
+          Développeur Full-Stack &amp; DevOps, en Mastère Ingénierie Avancée du Logiciel.
           Je recherche une alternance en développement, DevOps ou cybersécurité.
         </p>
 

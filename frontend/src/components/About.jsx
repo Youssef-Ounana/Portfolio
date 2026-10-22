@@ -1,7 +1,7 @@
 import React from 'react';
 
 const facts = [
-  { label: 'Formation', value: 'Mastère Ingénierie Avancée du Logiciel — ISCOD (2026–2028)' },
+  { label: 'Formation', value: 'Mastère Ingénierie Avancée du Logiciel — ISCOD' },
   { label: 'Diplôme', value: 'Licence Informatique — Université d’Avignon' },
   { label: 'Rythme', value: '4 jours en entreprise / 1 jour en formation' },
   { label: 'Mobilité', value: 'Basé à Avignon, mobile partout en France' },
