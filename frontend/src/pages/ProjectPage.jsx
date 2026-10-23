@@ -1,4 +1,5 @@
-import React, { useEffect } from 'react';
+import React from 'react';
+import usePageMeta from '../hooks/usePageMeta';
 import { Link, useParams } from 'react-router-dom';
 import projects, { getProjectBySlug } from '../data/projects';
 import NotFound from './NotFound';
@@ -14,9 +15,12 @@ const ProjectPage = () => {
   const { slug } = useParams();
   const project = getProjectBySlug(slug);
 
-  useEffect(() => {
-    if (project) document.title = `${project.title} — Youssef Ounana`;
-  }, [project]);
+  // Le hook est appelé avant le "return" (règle des hooks), même si le projet n'existe pas
+  usePageMeta({
+    title: project ? `${project.title} — Youssef Ounana` : 'Page introuvable — Youssef Ounana',
+    description: project?.description,
+    path: `/projets/${slug}`,
+  });
 
   if (!project) return <NotFound />;
 

@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import profileImg from '../assets/profile.png';
+import profileImg from '../assets/profile.webp';
 
 const FULL_NAME = 'Youssef';
 
