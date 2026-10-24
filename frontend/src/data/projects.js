@@ -144,19 +144,22 @@ const projects = [
     github: "https://github.com/Youssef-Ounana/Decisio",
     demo: null,
   },
-  {
+    {
     slug: "wesee",
     title: "WeSee",
     category: "Web",
     status: "terminé",
     team: "Projet d'équipe",
-    role: "TODO: décrire ta partie",
-    description: "Plateforme de visionnage collaboratif : regarder des vidéos ensemble, en synchronisé.",
-    problem: null, // TODO
-    features: [], // TODO
-    challenges: [], // TODO
-    learnings: null,
-    tech: [], // TODO: stack
+    role: "Développeur full-stack, principalement front-end",
+    description:
+      "Plateforme de visionnage collaboratif : regarder des vidéos ensemble, en même temps, depuis des appareils différents.",
+    problem:
+      "Regarder une vidéo à plusieurs à distance oblige souvent à se coordonner à la main (« lance à 3… »). WeSee réunit les participants dans un même espace de visionnage.",
+    features: [],    // à compléter
+    challenges: [],  // à compléter
+    learnings:
+      "Travailler à plusieurs sur une même base de code Next.js : répartition des tâches, revues et intégration du front avec l'API.",
+    tech: ["Next.js", "React","webSocket"], // à compléter
     image: "/projects/wesee.webp",
     github: null,
     demo: null,
