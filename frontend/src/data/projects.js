@@ -144,7 +144,56 @@ const projects = [
     github: "https://github.com/Youssef-Ounana/Decisio",
     demo: null,
   },
-    {
+  {
+    slug: "amiibo-quiz",
+    title: "Amiibo Quiz",
+    category: "Mobile",
+    status: "terminé",
+    team: "Projet universitaire — CERI Avignon",
+    role: "Développement de l'application Android",
+    description:
+      "Application Android de quiz sur les figurines Amiibo de Nintendo : on choisit ses séries de jeux, l'app récupère les données depuis une API publique et génère des questions à partir des images.",
+    problem:
+      "Projet de développement mobile : construire une application Android complète qui consomme une API REST, stocke les données en local et propose une expérience de jeu interactive.",
+    features: [
+      "Sélection des séries de jeux (au moins 4), avec un bouton « tout sélectionner »",
+      "Téléchargement des Amiibos depuis l'API publique AmiiboAPI",
+      "Stockage local avec Realm : une série déjà téléchargée n'est pas rechargée",
+      "Deux types de questions à partir de l'image : retrouver le nom ou la série de jeu, parmi 3 propositions",
+      "Navigation par gestes : balayer à droite ou à gauche pour changer de type de question",
+      "Score (+2 / −2) dont la couleur change selon le résultat, avec réinitialisation",
+      "Musique de fond mise en pause automatiquement quand l'écran se verrouille",
+    ],
+    challenges: [
+      {
+        title: "Appels réseau sans bloquer l'interface",
+        solution:
+          "Les requêtes Retrofit s'exécutent dans une coroutine sur Dispatchers.IO, puis l'interface est mise à jour sur le thread principal avec withContext(Dispatchers.Main).",
+      },
+      {
+        title: "Utiliser Realm depuis plusieurs threads",
+        solution:
+          "Une instance Realm ne peut être utilisée que dans le thread qui l'a ouverte : la coroutine ouvre sa propre instance et la ferme dans un bloc finally. Le jeu travaille sur une copie détachée (copyFromRealm).",
+      },
+      {
+        title: "Éviter les doublons",
+        solution:
+          "Les séries renvoyées par l'API sont dédoublonnées par nom, et chaque Amiibo est vérifié par son identifiant avant d'être inséré en base.",
+      },
+      {
+        title: "Générer 3 propositions toutes différentes",
+        solution:
+          "Les propositions sont stockées dans un Set jusqu'à obtenir 3 valeurs distinctes, puis mélangées pour que la bonne réponse change de place.",
+      },
+    ],
+    learnings:
+      "Structurer une application Android (activités, ViewBinding, menus), consommer une API REST avec Retrofit, programmer en asynchrone avec les coroutines Kotlin et gérer une base locale.",
+    tech: ["Kotlin", "Android", "Retrofit", "Coroutines", "Realm", "Glide"],
+    image: null,
+    github: "https://github.com/Youssef-Ounana/Amiibo",
+    demo: null,
+  },
+  {
     slug: "wesee",
     title: "WeSee",
     category: "Web",
